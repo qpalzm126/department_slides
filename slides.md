@@ -1,6 +1,6 @@
 ---
 # You can also start simply with 'default'
-theme: seriph
+theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
@@ -22,21 +22,25 @@ transition: slide-left
 mdc: true
 ---
 
-# Welcome to Slidev
 
-Presentation slides for developers
+# 跨領域分享
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
+<div class="mt-10 py-1" color="white op-80">Speaker: 陳立倫</div> 
+<!-- <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
   Press Space for next page <carbon:arrow-right />
-</div>
+</div> -->
+
 
 <div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor" title="Open in Editor" class="slidev-icon-btn">
+  <!-- <button @click="$slidev.nav.openInEditor" title="Open in Editor" class="slidev-icon-btn">
     <carbon:edit />
   </button>
   <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
-  </a>
+  </a> -->
+  <button  onclick="document.documentElement.requestFullscreen()" font-size='4'  hover:bg="white op-10">
+    Full Screen
+</button>
 </div>
 
 <!--
@@ -44,12 +48,12 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
-transition: fade-out
+transition: slide-up
 ---
 
 # About me
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+
 
 - 📝 **Text-based** - focus on the content with Markdown, and then style them later
 - 🎨 **Themable** - themes can be shared and re-used as npm packages
