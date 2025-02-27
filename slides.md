@@ -23,7 +23,8 @@ mdc: true
 ---
 
 
-# 跨領域分享
+# 二三類跨領域分享
+
 
 <div class="mt-10 py-1" color="white op-80">Speaker: 陳立倫</div> 
 <!-- <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
@@ -38,9 +39,6 @@ mdc: true
   <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a> -->
-  <button  onclick="document.documentElement.requestFullscreen()" font-size='4'  hover:bg="white op-10">
-    Full Screen
-</button>
 </div>
 
 <!--
@@ -49,21 +47,27 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 transition: slide-up
+layout: two-cols
+layoutClass: gap-10
 ---
 
 # About me
 
+<!-- -[foo]: http://example.com/  "Optional Title Here" -->
 
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
+
+- 📝 **Text-based** - 台大生化科技系學士
+- 🎨 **Themable** - 台大分子醫學研究所碩士
+
+::right::
+<img src="/images/123.png" alt=''  height="100%"   object-fit="cover">
+-  🧑‍💻 **Developer Friendly** -  自學程式
+-  🤹 **Interactive** - 現任外商軟體工程師
 - 🎥 **Recording** - built-in recording and camera view
 - 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
 - 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+
 
 
 <!--
@@ -115,6 +119,7 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
+transition: slide-up
 layout: two-cols
 layoutClass: gap-16
 ---
