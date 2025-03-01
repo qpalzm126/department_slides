@@ -22,24 +22,13 @@ transition: slide-left
 mdc: true
 ---
 
-
 # 二三類跨領域分享
 
-
-<div class="mt-10 py-1" color="white op-80">Speaker: 陳立倫</div> 
+<div class="mt-12 py-1" color="white op-80" font-size="2xl">Speaker: 陳立倫</div> 
 <!-- <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
   Press Space for next page <carbon:arrow-right />
 </div> -->
 
-
-<div class="abs-br m-6 text-xl">
-  <!-- <button @click="$slidev.nav.openInEditor" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
-  </a> -->
-</div>
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
@@ -51,24 +40,39 @@ layout: two-cols
 layoutClass: gap-10
 ---
 
-# About me
+# About me 
 
 <!-- -[foo]: http://example.com/  "Optional Title Here" -->
 
-
-
-- 📝 **Text-based** - 台大生化科技系學士
-- 🎨 **Themable** - 台大分子醫學研究所碩士
+  <div mt-8>
+    <p>📝 -  台大生化科技系學士</p>
+    <p>🧑‍🎓 -  台大分子醫學研究所碩士</p>
+    <div mt-10>-  工作場所、時間受限</div>
+    <div mt-2>-  研究投入時間成本高</div>
+    <div class="flex flex-col justify-between items-center text-center flex-1" > 
+      <div class="flex items-center justify-center">
+        <img src="/images/kenkyu_man_normal.png"  alt='' height="50%" width="50%" >
+      </div>
+      <div  color="gray-500 op-90">Before</div>
+    </div>
+      <!-- <arrow v-click="1" x1="420" y1="320" x2="600" y2="320" color="#953" width="2" arrowSize="1"   :style="{ transition: 'opacity 0.3s ease-in-out', opacity: $slidev.nav.clicks >= 1 ? 0.8 : 0 }"
+      /> -->
+  </div>
 
 ::right::
-<img src="/images/123.png" alt=''  height="100%"   object-fit="cover">
--  🧑‍💻 **Developer Friendly** -  自學程式
--  🤹 **Interactive** - 現任外商軟體工程師
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
 
-
+  <div pt-13 v-click="1" class="border-l h-full pl-12 border-gray-400" 
+      :style="{ transition: 'opacity 0.3s ease-in-out', opacity: $slidev.nav.clicks >= 1 ? 1 : 0 }
+    ">
+    <p>🖥️ - 自學程式</p>
+    <p>🧑‍💻 - 現任外商軟體工程師</p>
+    <div mt-10>-  工作地點、時間彈性</div>
+    <div mt-2>-  待遇天花板高</div>
+     <div  mt-1 class="flex flex-col justify-between items-center text-center" > 
+      <img src="/images/computer_tokui_boy.png"  alt='' height="50%" width="50%" >
+      <div mt-3 color="gray-500 op-90">After</div>
+    </div>
+  </div>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -87,98 +91,228 @@ h1 {
 }
 </style>
 
-<!--
-Here is another comment.
--->
+---
+transition: slide-up
+level: 2
+---
+
+# 二三類跨領域核心能力
+
+
+<div mt-20 class="flex items-center ">
+
+  <div  border-r border-gray-400 class="flex flex-col justify-between items-center text-center w-1/2" width="5"> 
+      <img src="/images/document_ronbun_taba.png"  alt='' height="50%" width="50%" >
+      <div mt-3 text-2xl  color="gray-500 op-90">學界</div>
+  </div>
+
+  <div class="flex flex-col justify-between items-center text-center  w-1/2" > 
+      <img src="/images/building_kaisya.png"  alt='' height="50%" width="50%" >
+      <div mt-3 text-2xl color="gray-500 op-90">業界</div>
+  </div>
+
+</div>
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
 transition: slide-up
 level: 2
 ---
 
-# Navigation
+# 二三類跨領域核心能力 - 學界
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+<ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
+  <li >科學方法</li>
+  <!-- <li>第二點</li>
+  <ul class="list-[circle] text-gray-500 pl-6">
+    <li>子項目 1</li>
+    <li>子項目 2</li>
+  </ul> -->
+</ul>
 
-## Keyboard Shortcuts
+<div class="flow-chart">
+  <div class="flow-item" >
+    <div class="icon">🔍</div>
+    <div class="text">觀察</div>
+  </div>
+  <div class="arrow" >→</div>
+  <div class="flow-item" :class="{ 'active': $slidev.nav.clicks >= 1 }">
+    <div class="icon">❓</div>
+    <div class="text">提出問題</div>
+  </div>
+  <div class="arrow">→</div>
+  <div class="flow-item" :class="{ 'active': $slidev.nav.clicks >= 2 }">
+    <div class="icon">📚</div>
+    <div class="text">参考文獻</div>
+  </div>
+  <div class="arrow">→</div>
+  <div class="flow-item" :class="{ 'active': $slidev.nav.clicks >= 3 }">
+    <div class="icon">💡</div>
+    <div class="text">假設</div>
+  </div>
+  <div class="arrow" >→</div>
+  <div class="flow-item" :class="{ 'active': $slidev.nav.clicks >= 4 }">
+    <div class="icon">🧪</div>
+    <div class="text">實驗</div>
+  </div>
+  <div class="arrow" >→</div>
+  <div class="flow-item" :class="{ 'active': $slidev.nav.clicks >= 5 }">
+    <div class="icon">📊</div>
+    <div class="text">結論</div>
+  </div>
+</div>
 
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+<style>
+.flow-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+.flow-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  /* backdrop-filter: blur(10px);
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  transform: scale(0.9); */
+   opacity: 1;
+  transform: scale(1);
+  background: rgba(255, 255, 255, 0.2);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+.flow-item.active {
+  opacity: 1;
+  transform: scale(1);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-weight: bold;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+
+.arrow.active {
+  opacity: 1;
+  color: #3b82f6;
+}
+
+@media (max-width: 768px) {
+  .flow-chart {
+    flex-direction: column;
+  }
+  
+  .arrow {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+}
+
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
 transition: slide-up
-layout: two-cols
-layoutClass: gap-16
+level: 2
 ---
 
-# Table of contents
+# 二三類跨領域核心能力 - 業界
 
-You can use the `Toc` component to generate a table of contents for your slides:
+<ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
+  <li >專業能力</li>
+  <li>發現解決提出問題能力</li>
+  <li>溝通表達能力</li>
+  <li>尋找資源能力</li>
+  <li>學習能力</li>
+  <!-- <ul class="list-[circle] text-gray-500 pl-6">
+    <li>子項目 1</li>
+    <li>子項目 2</li>
+  </ul> -->
+</ul>
 
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
 
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc text-sm minDepth="1" maxDepth="2" />
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
 <style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+</style>
+
+---
+# layout: image-right
+trasition: slide-up
+# image: https://cover.sli.dev
+
+---
+
+# 二三類跨領域核心能力 - 業界
+
+<ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
+  <li >專業能力</li>
+  <li>發現解決提出問題能力</li>
+  <li>溝通表達能力</li>
+  <li>尋找資源能力</li>
+  <li>學習能力</li>
+  <!-- <ul class="list-[circle] text-gray-500 pl-6">
+    <li>子項目 1</li>
+    <li>子項目 2</li>
+  </ul> -->
+</ul>
+
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 </style>
 
@@ -193,111 +327,183 @@ Notes can also sync with clicks
 -->
 
 ---
+# layout: center
+# class: text-center
+transition: slide-up
 level: 2
 ---
 
-# Shiki Magic Move
+# 二三類跨領域核心能力 - 應用
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+<div class="venn-container">
+  <div class="venn-circle biology">
+    <div class="label">生物</div>
+  </div>
+  <div class="venn-circle programming">
+    <div class="label">程式</div>
+  </div>
+  <div class="intersection">
+    <div class="intersection-label">生物資訊</div>
+  </div>
+</div>
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
+<!-- <div class="grid grid-cols-2 gap-12"> -->
+  <div class="bg-purple-100 dark:bg-purple-800 p-6 rounded-lg shadow-lg">
+    <h3 class="text-xl font-bold mb-4">應用</h3>
+    <ul class="space-y-2">
+      <li>基因组分析</li>
+      <li>蛋白质结构预测</li>
+      <li>药物设计</li>
+      <li>疾病诊断</li>
+    </ul>
+  </div>
+<!-- </div> -->
 
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
 
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
+.venn-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.venn-circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.venn-circle:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.biology {
+  left: 80px;
+  background-color: rgba(46, 204, 113, 0.6);
+  border: 2px solid rgba(46, 204, 113, 1);
+}
+
+.programming {
+  right: 80px;
+  background-color: rgba(52, 152, 219, 0.6);
+  border: 2px solid rgba(52, 152, 219, 1);
+}
+
+.label {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.biology .label {
+  transform: translateX(-40px);
+}
+
+.programming .label {
+  transform: translateX(40px);
+}
+
+.intersection {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.intersection-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(142, 68, 173, 0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 10px solid rgba(142, 68, 173, 0.8);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
   }
 }
-```
+</style>
 
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
+---
+layout: two-cols
+---
 
-Non-code blocks are ignored.
+# 生物領域
+- 分子生物学
+- 遗传学
+- 细胞生物学
+- 微生物学
+- 演化生物学
 
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
+::right::
+
+# 程式領域
+- 算法设计
+- 数据结构
+- 软件工程
+- 编程语言
+- 人工智能
+
 
 ---
 
-# Components
+# 跨領域心得
 
-<div grid="~ cols-2 gap-4">
-<div>
+<ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
+  <li >按部就班</li>
+  <ul class="list-[circle] text-xl text-gray-500 pl-6">
+    <li>不要為了跨而跨 剛上大學連自己的領域都還不熟悉 按部就本的來 本質上還是追尋自己想要的 我的跨領域只是結果</li>
+    <li>子項目 2</li>
+  </ul>
+  <li>自己的技能或是專長也是廣義的跨領域</li>
+  <li>累積和轉化自己的經驗能力，應用在跨領域上，過去的經驗沒有白費</li>
+  <li>別人的策略不一定能套用在自己身上，走出自己的路</li>
+</ul>
 
-You can use Vue components directly inside your slides.
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 <!--
 Presenter note with **bold**, *italic*, and ~~striked~~ text.
 
@@ -309,30 +515,18 @@ Also, HTML elements are valid:
 -->
 
 ---
-class: px-20
----
 
-# Themes
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+# 結語
 
-<div grid="~ cols-2 gap-2" m="t-2">
+<div m="t-4" class="text-3xl font-bold text-center"> 你想成為什麼樣的人？</div>
 
-```yaml
----
-theme: default
----
-```
+<div grid="~ cols-2 gap-2" m="t-10">
 
-```yaml
----
-theme: seriph
----
-```
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
+  <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
+  <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
 
 </div>
 
@@ -467,7 +661,9 @@ LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
 Inline $\sqrt{3x-1}+(1+x)^2$
 
 Block
-$$ {1|3|all}
+
+$$
+{1|3|all}
 \begin{aligned}
 \nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
 \nabla \cdot \vec{B} &= 0 \\
@@ -557,9 +753,19 @@ database "MySql" {
 Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
 
 ---
+
 foo: bar
 dragPos:
-  square: 691,32,167,_,-16
+square: 691,32,167,\_,-16
+
+---
+
+dragPos:
+square: -37,0,0,0
+
+---
+dragPos:
+  square: -37,0,0,0
 ---
 
 # Draggable Elements
@@ -585,7 +791,7 @@ Double-click on the draggable elements to edit their positions.
 </v-drag>
 ```
 
-<v-drag pos="663,206,261,_,-15">
+<v-drag pos="522,101,261,_,-15">
   <div text-center text-3xl border border-main rounded>
     Double-click me!
   </div>
@@ -599,12 +805,15 @@ Double-click on the draggable elements to edit their positions.
 <v-drag-arrow two-way />
 ```
 
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
+<v-drag-arrow pos="300,365,-181,29" two-way op70 />
 
 ---
+
 src: ./pages/imported-slides.md
 hide: false
+
 ---
+
 
 ---
 
@@ -629,12 +838,19 @@ import { emptyArray, sayHello } from './external'
 
 sayHello()
 console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
+console.log(
+  emptyArray<number>(10).reduce(
+    (fib) => [...fib, fib.at(-1)! + fib.at(-2)!],
+    [1, 1]
+  )
+)
 ```
 
 ---
+
 layout: center
 class: text-center
+
 ---
 
 # Learn More
