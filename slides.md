@@ -282,40 +282,6 @@ h1 {
 }
 </style>
 
----
-# layout: image-right
-trasition: slide-up
-# image: https://cover.sli.dev
-
----
-
-# 二三類跨領域核心能力 - 業界
-
-<ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
-  <li >專業能力</li>
-  <li>發現解決提出問題能力</li>
-  <li>溝通表達能力</li>
-  <li>尋找資源能力</li>
-  <li>學習能力</li>
-  <!-- <ul class="list-[circle] text-gray-500 pl-6">
-    <li>子項目 1</li>
-    <li>子項目 2</li>
-  </ul> -->
-</ul>
-
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
 <!--
 Notes can also sync with clicks
 
