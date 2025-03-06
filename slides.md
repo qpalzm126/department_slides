@@ -67,7 +67,7 @@ layoutClass: gap-10
     <p>🖥️ - 自學程式</p>
     <p>🧑‍💻 - 現任外商軟體工程師</p>
     <div mt-10>-  工作地點、時間彈性</div>
-    <div mt-2>-  待遇天花板高</div>
+    <div mt-2>-  職涯成長與發展空間大</div>
      <div  mt-1 class="flex flex-col justify-between items-center text-center" > 
       <img src="/images/computer_tokui_boy.png"  alt='' height="50%" width="50%" >
       <div mt-3 color="gray-500 op-90">After</div>
@@ -96,7 +96,7 @@ transition: slide-up
 level: 2
 ---
 
-# 二三類跨領域核心能力
+# 二三類跨領域核心素養
 
 
 <div mt-20 class="flex items-center ">
@@ -130,7 +130,7 @@ transition: slide-up
 level: 2
 ---
 
-# 二三類跨領域核心能力 - 學界
+# 二三類跨領域核心素養 - 學界
 
 <ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
   <li >科學方法</li>
@@ -173,6 +173,24 @@ level: 2
   </div>
 </div>
 
+<div v-click="1" class="flow-chart"  :style="{ transition: 'opacity 0.3s ease-in-out'}">
+  <div class="flow-item" >
+    <!-- <div class="icon">🔍</div> -->
+    <div text-3xl class="text">A細胞</div>
+  </div>
+  <div class="arrow" >→</div>
+  <div v-click="2" class="flow-item"  :style="{ transition: 'opacity 0.3s ease-in-out'}">
+    <div  class="icon absolute top-[-10px] op-35" style="font-size: 60px">❓</div>
+    <div text-3xl class="text">C物質</div>
+  </div>
+  <div class="arrow">→</div>
+  <div class="flow-item" :class="{ 'active': $slidev.nav.clicks >= 2 }">
+    <!-- <div class="icon">📚</div> -->
+    <div text-3xl class="text">B現象</div>
+  </div>
+</div>
+
+
 <style>
 .flow-chart {
   display: flex;
@@ -200,12 +218,12 @@ level: 2
   /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
 }
 
-.flow-item.active {
+/* .flow-item.active {
   opacity: 1;
   transform: scale(1);
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .icon {
   font-size: 2rem;
@@ -255,18 +273,13 @@ transition: slide-up
 level: 2
 ---
 
-# 二三類跨領域核心能力 - 業界
+# 二三類跨領域核心素養 - 業界
 
 <ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
-  <li >專業能力</li>
-  <li>發現解決提出問題能力</li>
+  <li>提出問題、解決問題能力</li>
   <li>溝通表達能力</li>
   <li>尋找資源能力</li>
-  <li>學習能力</li>
-  <!-- <ul class="list-[circle] text-gray-500 pl-6">
-    <li>子項目 1</li>
-    <li>子項目 2</li>
-  </ul> -->
+  <li>自我學習能力</li>
 </ul>
 
 
@@ -313,17 +326,6 @@ level: 2
   </div>
 </div>
 
-<!-- <div class="grid grid-cols-2 gap-12"> -->
-  <div class="bg-purple-100 dark:bg-purple-800 p-6 rounded-lg shadow-lg">
-    <h3 class="text-xl font-bold mb-4">應用</h3>
-    <ul class="space-y-2">
-      <li>基因组分析</li>
-      <li>蛋白质结构预测</li>
-      <li>药物设计</li>
-      <li>疾病诊断</li>
-    </ul>
-  </div>
-<!-- </div> -->
 
 <style>
 h1 {
@@ -340,7 +342,7 @@ h1 {
   position: relative;
   width: 600px;
   height: 400px;
-  margin: 0 auto;
+  margin: 75px auto 0;
 }
 
 .venn-circle {
@@ -423,26 +425,43 @@ h1 {
 </style>
 
 ---
-layout: two-cols
+layout: default
 ---
 
-# 生物領域
-- 分子生物学
-- 遗传学
-- 细胞生物学
-- 微生物学
-- 演化生物学
+# 二三類跨領域核心能力 - 應用
 
-::right::
+<div mt-12 class="grid grid-cols-2 gap-12">
+  <div class="bg-purple-100 dark:bg-purple-800 p-6 rounded-lg shadow-lg">
+    <h3 class="text-xl font-bold mb-4">應用</h3>
+    <ul class="space-y-2">
+      <li>基因组分析</li>
+      <li>蛋白質結構預測</li>
+      <li>藥物設計</li>
+      <li>疾病診斷</li>
+    </ul>
+  </div>
+  <div class="bg-purple-100 dark:bg-purple-800 p-6 rounded-lg shadow-lg">
+    <h3 class="text-xl font-bold mb-4">相關技術</h3>
+    <ul class="space-y-2">
+      <li>序列比對</li>
+      <li>大數據處理</li>
+      <li>可視化工具</li>
+      <li>統計分析方法</li>
+    </ul>
+  </div>
+</div>
 
-# 程式領域
-- 算法设计
-- 数据结构
-- 软件工程
-- 编程语言
-- 人工智能
-
-
+<style>
+  h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 ---
 
 # 跨領域心得
@@ -450,12 +469,20 @@ layout: two-cols
 <ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
   <li >按部就班</li>
   <ul class="list-[circle] text-xl text-gray-500 pl-6">
-    <li>不要為了跨而跨 剛上大學連自己的領域都還不熟悉 按部就本的來 本質上還是追尋自己想要的 我的跨領域只是結果</li>
-    <li>子項目 2</li>
+    <li>不要為了跨而跨</li>
+    <!-- 剛上大學連自己的領域都還不熟悉 按部就本的來 本質上還是追尋自己想要的 我的跨領域只是結果 -->
   </ul>
-  <li>自己的技能或是專長也是廣義的跨領域</li>
-  <li>累積和轉化自己的經驗能力，應用在跨領域上，過去的經驗沒有白費</li>
+  <!-- <li>自己的技能或是專長也是廣義的跨領域</li> -->
+  <li>累積和轉化自己的經驗</li>
+    <ul class="list-[circle] text-xl text-gray-500 pl-6">
+      <li>過去的經驗不會白費</li>
+      <li>不要忘記</li>
+    </ul>
   <li>別人的策略不一定能套用在自己身上，走出自己的路</li>
+    <ul class="list-[circle] text-xl text-gray-500 pl-6">
+        <li>可以參考別人，但不盲從</li>
+    </ul>
+
 </ul>
 
 
@@ -487,340 +514,24 @@ Also, HTML elements are valid:
 
 <div m="t-4" class="text-3xl font-bold text-center"> 你想成為什麼樣的人？</div>
 
-<div grid="~ cols-2 gap-2" m="t-10">
+<div grid="~ cols-2 gap-2" m="t-4">
 
+  <div >
+    <div  m="t-[-20]" class=" flex justify-center">  
+      <img  border="rounded" src="/images/Brian_May.jpg" alt="" height="55%" width="55%">
+    </div>
 
-  <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-  <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
-
-</div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
   </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
+  
+  <div>
+      <img border="rounded" src="/images/Brain_May2.jpg" alt="" >
   </div>
 </div>
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-
-$$
-{1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-
-foo: bar
-dragPos:
-square: 691,32,167,\_,-16
-
----
-
-dragPos:
-square: -37,0,0,0
-
----
-dragPos:
-  square: -37,0,0,0
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="522,101,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="300,365,-181,29" two-way op70 />
-
----
-
-src: ./pages/imported-slides.md
-hide: false
-
----
+<div mt-6 text-xl text="center">皇后合唱團吉他手 Brian May</div>
 
 
 ---
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(
-  emptyArray<number>(10).reduce(
-    (fib) => [...fib, fib.at(-1)! + fib.at(-2)!],
-    [1, 1]
-  )
-)
-```
-
+layout: end
 ---
 
-layout: center
-class: text-center
-
----
-
-# Learn More
-
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
-
-<PoweredBySlidev mt-10 />
