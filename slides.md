@@ -464,7 +464,7 @@ layout: default
 </style>
 ---
 
-# 跨領域心得
+# 跨領域的體悟與收穫
 
 <ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
   <li >按部就班</li>
