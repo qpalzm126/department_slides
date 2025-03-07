@@ -73,6 +73,8 @@ layoutClass: gap-10
       <div mt-3 color="gray-500 op-90">After</div>
     </div>
   </div>
+<!-- 當時候的年齡 決定 為什麼做出這個決定 -->
+
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -312,7 +314,7 @@ transition: slide-up
 level: 2
 ---
 
-# 二三類跨領域核心能力 - 應用
+# 二三類跨領域核心素養 - 應用
 
 <div class="venn-container">
   <div class="venn-circle biology">
@@ -428,7 +430,7 @@ h1 {
 layout: default
 ---
 
-# 二三類跨領域核心能力 - 應用
+# 二三類跨領域核心素養 - 應用
 
 <div mt-12 class="grid grid-cols-2 gap-12">
   <div class="bg-purple-100 dark:bg-purple-800 p-6 rounded-lg shadow-lg">
@@ -466,13 +468,13 @@ layout: default
 
 # 跨領域的體悟與收穫
 
-<ul mt-12 class=" list-disc text-2xl text-gray-800 pl-6 space-y-2">
+<ul mt-6 class="list-disc text-2xl text-gray-800 pl-6 space-y-2">
   <li >按部就班</li>
-  <ul class="list-[circle] text-xl text-gray-500 pl-6">
-    <li>不要為了跨而跨</li>
-    <!-- 剛上大學連自己的領域都還不熟悉 按部就本的來 本質上還是追尋自己想要的 我的跨領域只是結果 -->
-  </ul>
-  <!-- <li>自己的技能或是專長也是廣義的跨領域</li> -->
+    <ul class="list-[circle] text-xl text-gray-500 pl-6">
+      <li>不要為了跨而跨</li>
+      <!-- 剛上大學連自己的領域都還不熟悉 按部就本的來 本質上還是追尋自己想要的 我的跨領域只是結果 -->
+    </ul>
+      <!-- <li>自己的技能或是專長也是廣義的跨領域</li> -->
   <li>累積和轉化自己的經驗</li>
     <ul class="list-[circle] text-xl text-gray-500 pl-6">
       <li>過去的經驗不會白費</li>
@@ -482,8 +484,13 @@ layout: default
     <ul class="list-[circle] text-xl text-gray-500 pl-6">
         <li>可以參考別人，但不盲從</li>
     </ul>
-
+  <li>就像＜自己的心情＞自己會瞭解一般，＜自己的特質和才幹＞也是自己會瞭解。
+      若自己不去做，自己也無法找到「自己的特質和才幹」。
+  <!-- 要由被動轉主動 -->
+  </li>
 </ul>
+
+
 
 
 <style>
