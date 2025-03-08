@@ -537,7 +537,7 @@ Also, HTML elements are valid:
 
 <div mt-6 text-xl text="center">皇后合唱團吉他手 Brian May</div>
 <!-- 倫敦帝國理工學院 -->
-過程可能會遇到困難，這些的經歷可能有成功有失敗，這些點點滴滴都組成成就了你這個人
+<!-- 過程可能會遇到困難，這些的經歷可能有成功有失敗，這些點點滴滴都組成成就了你這個人 -->
 ---
 layout: end
 ---
